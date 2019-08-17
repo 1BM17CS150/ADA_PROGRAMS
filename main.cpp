@@ -7,7 +7,6 @@ int main()
 	int n;
 	cout<<"Enter the number";
 	cin>>n;
-	//int sqr(int a)
 	
 	int l=n;
 	int f=0;
