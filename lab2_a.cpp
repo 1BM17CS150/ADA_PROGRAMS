@@ -8,31 +8,34 @@ int main(int argc, char **argv)
 	int p,m,temp;
 	cin>>n;
 	cout<<"enter the elements \n";
-	
+	int a[n];
 	for(int i=0;i<n;i++)
 	{
 		cin>>a[i];
 	}
 	for(int i=0;i<n;i++)
 	{
+		m=a[i];
+		
 		for(int j=i+1;j<n;j++)
 		{
-			if(a[j]<a[i])
+			if(a[j]<m)
 			{
-		       temp=a[i];
-		       a[i]=a[j];
-			   a[j]=temp;
+				p=j;
+				m=a[j];
 			}
 		}
+		temp=a[p];
+		a[p]=a[i];
+		a[i]=temp;
+		
 	}
-	
 	cout<<"Enter the value of k";
-	int k;
-	cin>>k;
-	for(int i=0;i<n;i++)
-	{
-		cout<<" "<<a[i]<<" ";
-	}
+	int z;
+	cin>>z;
+	cout<<a[z-1];
+	
+	
 	
 	return 0;
 }
