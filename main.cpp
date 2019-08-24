@@ -1,38 +1,38 @@
+#include <stdio.h>
 #include<iostream>
-#include<stdio.h>
-#include<math.h>
 using namespace std;
-int main()
+int main(int argc, char **argv)
 {
+	cout<<"enter the elements in the array";
 	int n;
-	cout<<"Enter the number";
+	int p,m,temp;
 	cin>>n;
+	int a[n];
+	cout<<"enter the elements \n";
 	
-	int l=n;
-	int f=0;
-
-	int p;
-
-	while(f<=l)
+	for(int i=0;i<n;i++)
 	{
-		int m=(f+l)/2;
-		if(m*m==n)
-		{	
-			cout<<m<<endl;
-			exit(0);
-			
-		}
-		else if((m*m)<n)
-		{
-			f=m+1;
-			p=m;
-		}
-		else
-		{
-			l=m-1;
-		}
-		
+		cin>>a[i];
 	}
-	cout<<p;
-	
+	for(int i=0;i<n;i++)
+	{
+		for(int j=i+1;j<n;j++)
+		{
+			if(a[j]>a[i])
+			{
+		       temp=a[i];
+		       a[i]=a[j];
+			   a[j]=temp;
+			}
+		}
+	}
+	/*for(int i=0;i<n;i++)
+	{
+		cout<<"  "<<a[i]<<" ";
+	}*/
+	cout<<"Enter the value of k";
+	int z;
+	cin>>z;
+	cout<<a[z-1];
+	return 0;
 }
