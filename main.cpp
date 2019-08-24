@@ -1,38 +1,34 @@
 #include <stdio.h>
 #include<iostream>
 using namespace std;
+int sq(int n)
+{
+	int f=0,l=n,m,p;
+	while(f<=l)
+	{
+		m=(f+l)/2;
+		if((m*m)==n)
+		   {
+			   return m;
+			
+		   }
+		 else if((m*m)<n)
+		   {
+			   f=m+1;
+			   p=m;
+			   
+		   }
+		   else
+		   l=m-1;
+        }
+		   return p;
+}
 int main(int argc, char **argv)
 {
-	cout<<"enter the elements in the array";
+	cout<<"Enter the no n";
 	int n;
-	int p,m,temp;
 	cin>>n;
-	int a[n];
-	cout<<"enter the elements \n";
-	
-	for(int i=0;i<n;i++)
-	{
-		cin>>a[i];
-	}
-	for(int i=0;i<n;i++)
-	{
-		for(int j=i+1;j<n;j++)
-		{
-			if(a[j]>a[i])
-			{
-		       temp=a[i];
-		       a[i]=a[j];
-			   a[j]=temp;
-			}
-		}
-	}
-	/*for(int i=0;i<n;i++)
-	{
-		cout<<"  "<<a[i]<<" ";
-	}*/
-	cout<<"Enter the value of k";
-	int z;
-	cin>>z;
-	cout<<a[z-1];
+	int ans=sq(n);
+	cout<<ans;		   
 	return 0;
 }
