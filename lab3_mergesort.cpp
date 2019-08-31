@@ -54,7 +54,7 @@ void merge(int arr[], int l, int m, int r)
 } 
   
 
-void mergeSort(int arr[], int l, int r) 
+void mSort(int arr[], int l, int r) 
 { 
     if (l < r) 
     { 
@@ -62,8 +62,8 @@ void mergeSort(int arr[], int l, int r)
         int m = l+(r-l)/2; 
   
         
-        mergeSort(arr, l, m); 
-        mergeSort(arr, m+1, r); 
+        mSort(arr, l, m); 
+        mSort(arr, m+1, r); 
   
         merge(arr, l, m, r); 
     } 
@@ -76,15 +76,15 @@ int main()
 	cout<<"(MERGE SORT) Enter the size:";
 	cin>>n;
 	int arr[n];
-	cout<<"Enter the elements:";
+	cout<<"Enter the elements in the array:";
 	for(i=0;i<n;i++)
 	{
 		cin>>arr[i];
 	}
   
-    mergeSort(arr, 0, n - 1); 
+    mSort(arr, 0, n - 1); 
   
-    cout << "Sorted array: \n";  
+    cout << "Sorted array after merge sort: \n";  
     for (i = 0; i < n; i++)  
         cout << arr[i] << " "; 
 cout<<endl;
