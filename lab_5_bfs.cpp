@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 int q[20],f=0,r=-1;
-int a[50][50],visited[50],n,s;;
+int a[60][60],visited[60],n,s;;
 
 void BFS(int k)
 {
@@ -45,7 +45,7 @@ int main()
     }
     for(int i=0;i<n;i++)
         visited[i]=0;
-    cout<<"Enter the source vertex : ";
+    cout<<" source vertex is : ";
     cin>>s;
     BFS(s);
     return 0;
