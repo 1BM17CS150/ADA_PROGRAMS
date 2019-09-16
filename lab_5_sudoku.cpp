@@ -3,7 +3,7 @@ using namespace std;
 #define UNASSIGNED 0
 #define N 9
 
-bool FindUnassignedLocation(int grid[N][N],
+bool FUL(int grid[N][N],
                             int &row, int &col);
 
 bool isSafe(int grid[N][N], int row,
@@ -12,7 +12,7 @@ bool isSafe(int grid[N][N], int row,
 bool SolveSudoku(int grid[N][N])
 {
     int row, col;
-    if (!FindUnassignedLocation(grid, row, col))
+    if (!FUL(grid, row, col))
     return true;
     for (int num = 1; num <= 9; num++)
     {
@@ -27,7 +27,7 @@ bool SolveSudoku(int grid[N][N])
     return false;
 }
 
-bool FindUnassignedLocation(int grid[N][N],
+bool FUL(int grid[N][N],
                             int &row, int &col)
 {
     for (row = 0; row < N; row++)
