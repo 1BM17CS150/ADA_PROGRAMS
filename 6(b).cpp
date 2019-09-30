@@ -35,7 +35,7 @@ void order()
 int main(){
     int p,q,d;
         a[n][n] = {0};
-        cout<<"Enter no. of tasks : "<<endl;
+        cout<<"Enter total no. of tasks : "<<endl;
         cin>>n;
         cout<<"Enter no. of dependencies : "<<endl;
         cin>>d;
